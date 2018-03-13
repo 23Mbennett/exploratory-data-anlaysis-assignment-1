@@ -1,5 +1,4 @@
 plot2 <- function (){
-  
   library("stringr")
   library("dplyr");
   
@@ -8,9 +7,6 @@ plot2 <- function (){
   data$Date <- as.Date(data$Date, "%d/%m/%Y");
   
   filtered <- filter(data, Date == "2007-02-01" | Date == "2007-02-02");
-  
-  #data$Time <- strptime(data$Time, "%H:%M:%S");
-  #data$Time <- format(data$Time, format = "%H:%M:%S");
   
   filtered$Time <- as.POSIXct(paste(filtered$Date, filtered$Time), format = "%Y-%m-%d %H:%M:%S");
   

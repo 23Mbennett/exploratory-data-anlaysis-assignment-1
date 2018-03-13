@@ -1,5 +1,4 @@
 plot1 <- function (){
-  
   library("stringr")
   library("dplyr");
   
